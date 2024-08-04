@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Teste" />
+        <module name="testemockito" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Teste_Software_2024_Chagas_Andrey" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

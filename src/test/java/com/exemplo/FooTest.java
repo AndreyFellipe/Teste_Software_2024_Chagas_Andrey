@@ -9,10 +9,16 @@ public class FooTest {
     @Test
     public void testFoo() {
         Bar bar = mock(Bar.class);
-        Foo foo = new Foo();
+        BarFactory myFactory = new BarFactory() {
+            @Override
+            public Bar createBar() {
+                return bar;
+            }
+        };
 
+        Foo foo = new Foo(myFactory);
         foo.foo();
 
-        verify(bar, times(1)).someMethod();  // Este teste vai falhar
+        verify(bar, times(1)).someMethod();
     }
 }
