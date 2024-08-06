@@ -1,6 +1,15 @@
 # Teste_Software_2024_Chagas_Andrey
 
+# Projeto de Teste com Mockito
 Esta é a Atividade 1 – Testes Unitários e o Stack Overflow da disciplina de Teste de Software
+
+## Descrição do Problema
+
+O usuário no StackOverflow estava enfrentando dificuldades ao tentar usar o Mockito para verificar se o método `someMethod` de uma instância da classe `Bar` foi chamado exatamente uma vez após a execução do método `foo` da classe `Foo`. O problema ocorre porque o código original cria uma nova instância de `Bar` dentro do método `foo`, impedindo a substituição dessa instância por um mock durante os testes.
+
+## Descrição da Solução
+
+A solução para esse problema envolve a refatoração do código para usar uma fábrica (factory) para criar instâncias de `Bar`. Isso permite que a instância de `Bar` seja mockada e verificada corretamente nos testes. A solução aceita no StackOverflow sugere a injeção da instância de `Bar` por meio de uma fábrica, possibilitando o controle da instância utilizada no método `foo`.
 
 ## Configuração do Ambiente
 
